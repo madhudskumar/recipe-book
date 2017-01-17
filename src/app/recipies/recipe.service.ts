@@ -16,4 +16,12 @@ export class RecipeService {
   getRecipes(){
     return this.recipes;
   }
+
+  getRecipe(id){
+    return this.recipes[0];
+  }
+
+  deleteRecipe(id){
+
+  }
 }
