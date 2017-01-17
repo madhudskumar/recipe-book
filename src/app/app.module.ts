@@ -15,6 +15,9 @@ import { DropdownDirective } from './dropdown.directive';
 import {ShoppingListService} from "./shopping-list/shopping-list.service";
 import {APP_ROUTE_CONFIG} from "./app.routes";
 import { PageNotFoundComponent } from './page-not-found.component';
+import { SelectMessageComponent } from './recipies/select-message.component';
+import { RecipeEditComponent } from './recipies/recipe-edit/recipe-edit.component';
+import {RECIPE_ROUTES_CONFIG} from "./recipies/recipes.routes";
 
 @NgModule({
   declarations: [
@@ -28,11 +31,14 @@ import { PageNotFoundComponent } from './page-not-found.component';
     ShoppingListAddComponent,
     DropdownDirective,
     PageNotFoundComponent,
+    SelectMessageComponent,
+    RecipeEditComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    RECIPE_ROUTES_CONFIG,
     APP_ROUTE_CONFIG
   ],
   providers: [ShoppingListService],
