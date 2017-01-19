@@ -3,7 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {RecipeService} from "../recipe.service";
 import {Subscription} from "rxjs";
 import {Recipe} from "../recipe";
-import {FormArray, FormGroup, FormControl, Validators, FormBuilder, NgForm} from "@angular/forms";
+import {FormArray, FormGroup, FormControl, Validators, FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'rb-recipe-edit',
@@ -14,12 +14,12 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
   recipeForm:FormGroup;
   private recipeIdSubscriptionHandler:Subscription;
   private recipeId:number;
+  private recipe:Recipe;
+  private isNew = true;
 
   constructor(
     private activatedRoute:ActivatedRoute,
     private recipeService:RecipeService,
-    private recipe:Recipe,
-    private isNew = true,
     private formBuilder: FormBuilder
   ) { }
 
@@ -35,6 +35,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
             this.isNew = true;
             this.recipe = null;
           }
+          this.initForm();
         }
       )
   }
