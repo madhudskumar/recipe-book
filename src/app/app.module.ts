@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -39,7 +39,8 @@ import {RECIPE_ROUTES_CONFIG} from "./recipies/recipes.routes";
     FormsModule,
     HttpModule,
     RECIPE_ROUTES_CONFIG,
-    APP_ROUTE_CONFIG
+    APP_ROUTE_CONFIG,
+    ReactiveFormsModule
   ],
   providers: [ShoppingListService],
   bootstrap: [AppComponent]
