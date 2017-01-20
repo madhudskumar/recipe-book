@@ -17,7 +17,7 @@ export class ShoppingListAddComponent implements OnChanges {
       this.isAdd = true;
       this.item = new Ingredient(null,null);
     }else {
-      this.isAdd = false;
+      this.isAdd = false
     }
   }
 
